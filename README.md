@@ -1,16 +1,8 @@
 # first_draft
 
-A new Flutter project.
+First draft of the application. 
 
-## Getting Started
+## Plan
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The homepage should be completed with fixed categories, in the future hoping to make these as tags on the posts. Navigation between homepage and category pages, as well as cart and profile.
+Also working on search filters, profile page draft and the cart mechanism.
