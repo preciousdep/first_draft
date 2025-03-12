@@ -1,4 +1,8 @@
 import 'package:first_draft/pages/home_page.dart';
+import 'package:first_draft/pages/my_cart.dart';
+import 'package:first_draft/pages/my_purchases.dart';
+import 'package:first_draft/pages/my_wallet.dart';
+import 'package:first_draft/pages/settings.dart';
 import 'package:first_draft/themes/light_mode.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +21,10 @@ class MyApp extends StatelessWidget {
       theme: LightMode,
       routes: {
         '/home_page': (context) => const HomePage(),
-        
+        '/my_cart': (context) => const CartPage(),
+        '/my_purchases': (context) => const PurchasesPage(),
+        '/my_wallet': (context) => const WalletPage(),
+        '/settings': (context) => const Settings(),
       }
       
     );
