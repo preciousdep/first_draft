@@ -71,7 +71,7 @@ class MyDrawer extends StatelessWidget {
                   icon: Icons.wallet,
                   onTap: () {
                     Navigator.pop(context);
-                    Navigator.pushNamed(context, '/my_purchases');
+                    Navigator.pushNamed(context, '/my_wallet');
                   },
                 ),
                 

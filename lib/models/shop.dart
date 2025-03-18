@@ -5,23 +5,23 @@ import 'package:flutter/material.dart';
   // products for sale
   final List<Category> categorieslist = [
     Category(
-      name: "Women's clothing",
-      icon: Icons.favorite,
+      name: "Women",
+      icon: Icons.woman,
     ),
 
     Category(
-      name: "Men's clothing",
-      icon: Icons.star,
+      name: "Men",
+      icon: Icons.man,
     ),
 
     Category(
       name: "Shoes",
-      icon: Icons.shield_moon_outlined,
+      icon: Icons.directions_run,
     ),
 
     Category(
       name: "Sportswear",
-      icon: Icons.sports,
+      icon: Icons.sports_football,
     ),
 
     Category(

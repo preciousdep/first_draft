@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       theme: LightMode,
       routes: {
-        '/home_page': (context) => const HomePage(),
+        '/home_page': (context) => HomePage(),
         '/my_cart': (context) => const CartPage(),
         '/my_purchases': (context) => const PurchasesPage(),
         '/my_wallet': (context) => const WalletPage(),
