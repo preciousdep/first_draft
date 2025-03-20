@@ -174,8 +174,15 @@ class HomePageState extends State<HomePage> {
                   itemBuilder: (context, index) {
                     final post = filteredPosts[index];
 
-                    return Card(
-                      elevation: 4,
+                    return GestureDetector(
+                      onTap: (){
+                        Navigator.pushNamed(context,
+                        '/post_page',
+                        arguments: post,
+                        );
+                      },
+
+                      child: Card(elevation: 4,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -235,7 +242,8 @@ class HomePageState extends State<HomePage> {
                             ),
                           ),
                         ],
-                      ),
+                      ),)
+                      
                     );
                   },
                 ),
