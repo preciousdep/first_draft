@@ -14,25 +14,28 @@ class MyDrawer extends StatelessWidget {
             // drawer head: logo
             Column(
               children: [
-                DrawerHeader(
-                  child: Column(
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/profile');
+                  },
+                  child: DrawerHeader(
+                      child: Column(
                     children: [
-                    Center(
-                      child: Icon(Icons.person,
-                      size: 72,
-                      color: Theme.of(context).colorScheme.inversePrimary),
-                    ),
-
-                    SizedBox(height:8),
-
-                    Text('Username',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Theme.of(context).colorScheme.inverseSurface,
-                    ))
-                  ],
-                  )
+                      Center(
+                        child: Icon(Icons.person,
+                            size: 72,
+                            color:
+                                Theme.of(context).colorScheme.inversePrimary),
+                      ),
+                      SizedBox(height: 8),
+                      Text('Username',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Theme.of(context).colorScheme.inverseSurface,
+                          ))
+                    ],
+                  )),
                 ),
 
                 const SizedBox(
@@ -53,19 +56,18 @@ class MyDrawer extends StatelessWidget {
                     Navigator.pop(context);
                     Navigator.pushNamed(context, '/my_cart');
                   },
-                  
                 ),
-                  // my purchases
+                // my purchases
                 MyListTile(
                   text: "My Purchases",
                   icon: Icons.gif_box,
                   onTap: () {
                     Navigator.pop(context);
                     Navigator.pushNamed(context, '/my_purchases');
-                  }, 
+                  },
                 ),
 
-                  // wallet
+                // wallet
                 MyListTile(
                   text: "My Wallet",
                   icon: Icons.wallet,
@@ -74,8 +76,8 @@ class MyDrawer extends StatelessWidget {
                     Navigator.pushNamed(context, '/my_wallet');
                   },
                 ),
-                
-                  // settings
+
+                // settings
                 MyListTile(
                   text: "Settings",
                   icon: Icons.settings,
@@ -84,8 +86,7 @@ class MyDrawer extends StatelessWidget {
                     Navigator.pushNamed(context, '/settings');
                   },
                 )
-
-                              ],
+              ],
             ),
 
             // exit shop tile
@@ -94,7 +95,6 @@ class MyDrawer extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 25.0),
               child: Column(
                 children: [
-
                   MyListTile(
                     text: "Exit",
                     icon: Icons.logout,
@@ -104,14 +104,13 @@ class MyDrawer extends StatelessWidget {
                           context, '/intro_page', (route) => false);
                     },
                   ),
-
                   MyListTile(
-                  text: "About",
-                  icon: Icons.info,
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                ),
+                    text: "About",
+                    icon: Icons.info,
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                  ),
                 ],
               ),
             )

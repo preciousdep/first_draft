@@ -5,11 +5,18 @@ import 'package:first_draft/pages/my_purchases.dart';
 import 'package:first_draft/pages/my_wallet.dart';
 import 'package:first_draft/pages/post.dart';
 import 'package:first_draft/pages/settings.dart';
+import 'package:first_draft/pages/profile.dart';
 import 'package:first_draft/themes/light_mode.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:first_draft/providers/user_provider.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => UserProvider()),
+      ],
+      child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -27,6 +34,7 @@ class MyApp extends StatelessWidget {
         '/my_purchases': (context) => const PurchasesPage(),
         '/my_wallet': (context) => const WalletPage(),
         '/settings': (context) => const Settings(),
+        '/profile': (context) => ProfilePage(),
       },
   onGenerateRoute: (settings) {
     if (settings.name == '/post_page') {
